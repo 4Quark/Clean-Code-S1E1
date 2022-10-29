@@ -13,11 +13,11 @@ body {
   text-align: right;
 }
 
-.matrix-picture img {
+.matrix-img {
   width: 100%;
 }
 
-.matrix-picture .info-linc {
+.info-linc {
   font-family: fantasy, cursive;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .item, 
-h3 {
+.list-header {
   list-style: none;
 }
 
@@ -60,7 +60,8 @@ button {
   outline: none;
 }
 
-button {
+.change_btn,
+.delete {
   background: none;
   border: 0px;
   color: #888;
@@ -70,14 +71,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.change_btn:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.list-header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +87,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task-input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -100,18 +100,18 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task-input:focus {
   color: #333;
 }
 
 /* New Task */
 
-label[for="new-task"] {
+.list-header {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+.task-input {
   width: 318px;
 }
 
@@ -131,45 +131,45 @@ input#new-task {
   vertical-align: middle;
 }
 
-.item > input[type="checkbox"] {
+.check-task {
   margin: 0 10px;
 }
 
-.item > label {
+.task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.item >  input[type="text"] {
+.item > .task-input {
   width: 226px;
 }
 
-button.delete img {
+.remove-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.remove-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-.task-list#completed-tasks label {
+.task-list#completed-tasks .task-input {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-.task-list .item input[type=text] {
+.task-list .item .task-input {
   display: none;
 }
 
-.task-list .item.edit-mode input[type=text] {
+.task-list .item.edit-mode .task-input {
   display: inline-block;
   width: 224px;
 }
